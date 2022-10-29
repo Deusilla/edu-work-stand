@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "cf2320aa-dd52-41db-b331-e15cf598183c",
+		"name": "Telegram Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15277552"
+	},
+	"item": [
+		{
+			"name": "getUpdates",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}getUpdates",
+					"host": [
+						"{{baseUrl}}getUpdates"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "361132758",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMessage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendMessage?chat_id={{chatId}}&text=Test message&parse_mode={{parseMode}}",
+					"host": [
+						"{{baseUrl}}sendMessage"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "text",
+							"value": "Test message"
+						},
+						{
+							"key": "parse_mode",
+							"value": "{{parseMode}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMessage (GROUP)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendMessage?chat_id={{groupChatId}}&text=BOT%20AHTUNG%21&parse_mode={{parseMode}}",
+					"host": [
+						"{{baseUrl}}sendMessage"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{groupChatId}}"
+						},
+						{
+							"key": "text",
+							"value": "BOT%20AHTUNG%21"
+						},
+						{
+							"key": "parse_mode",
+							"value": "{{parseMode}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendContact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendContact?chat_id={{chatId}}&title=My title&phone_number=+7920-123-45-67&first_name=Bonny&last_name=M.&reply_to_message_id=5",
+					"host": [
+						"{{baseUrl}}sendContact"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "title",
+							"value": "My title"
+						},
+						{
+							"key": "phone_number",
+							"value": "+7920-123-45-67"
+						},
+						{
+							"key": "first_name",
+							"value": "Bonny"
+						},
+						{
+							"key": "last_name",
+							"value": "M."
+						},
+						{
+							"key": "reply_to_message_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendDocument",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendDocument?chat_id={{chatId}}&document=https%3A%2F%2Fkkt-online.nalog.ru%2Fhtml%2Fsites%2Fwww.kkt-online.nalog.ru%2Fapi-description%2Fuse_cond_api.pdf&caption=%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20API%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D1%87%D0%B5%D0%BA%D0%BE%D0%B2%20%D0%B8%D0%B7%20%D0%BD%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D0%B9",
+					"host": [
+						"{{baseUrl}}sendDocument"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "document",
+							"value": "https%3A%2F%2Fkkt-online.nalog.ru%2Fhtml%2Fsites%2Fwww.kkt-online.nalog.ru%2Fapi-description%2Fuse_cond_api.pdf"
+						},
+						{
+							"key": "caption",
+							"value": "%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20API%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%20%D1%87%D0%B5%D0%BA%D0%BE%D0%B2%20%D0%B8%D0%B7%20%D0%BD%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D0%B9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendVideo",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendVideo?chat_id={{chatId}}&video=https%3A%2F%2Fcs14.pikabu.ru%2Fvideo%2F2021%2F06%2F10%2F1623320090217388226_448x298.mp4&caption=%D0%96%D0%B8%D0%B2%D0%B0%D1%8F%20%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%21",
+					"host": [
+						"{{baseUrl}}sendVideo"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "video",
+							"value": "https%3A%2F%2Fcs14.pikabu.ru%2Fvideo%2F2021%2F06%2F10%2F1623320090217388226_448x298.mp4"
+						},
+						{
+							"key": "caption",
+							"value": "%D0%96%D0%B8%D0%B2%D0%B0%D1%8F%20%D0%BB%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D0%B0%21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendVoice [POST]",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "voice",
+							"type": "file",
+							"src": "/Users/a.smithuoh/Downloads/mp3.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}sendVoice?chat_id={{chatId}}&caption=%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BD%D1%81%D0%B0%D0%BC%D0%B1%D0%BB%D1%8C%20%22%D0%A2%D0%B0%D1%80%D0%B0%D0%BD%22%2C%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F%20%22%D0%A1%D1%82%D0%BE%D0%BB%D0%B8%D1%86%D0%B0%22%21",
+					"host": [
+						"{{baseUrl}}sendVoice"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "caption",
+							"value": "%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%B0%D0%BD%D1%81%D0%B0%D0%BC%D0%B1%D0%BB%D1%8C%20%22%D0%A2%D0%B0%D1%80%D0%B0%D0%BD%22%2C%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F%20%22%D0%A1%D1%82%D0%BE%D0%BB%D0%B8%D1%86%D0%B0%22%21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendChatAction",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendChatAction?chat_id={{chatId}}&action=typing",
+					"host": [
+						"{{baseUrl}}sendChatAction"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "action",
+							"value": "typing"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendPoll (regular)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendPoll?chat_id={{chatId}}&question=Какой язык програмирования вы хотите изучить?&options=%5B%22PHP%22%2C%22JavaScript%22%2C%20%22%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B9%20%28%D0%B1%D0%B5%D1%81%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B9%29%20%D1%8F%D0%B7%D1%8B%D0%BA%22%5D&allows_multiple_answers=0&protect_content=1",
+					"host": [
+						"{{baseUrl}}sendPoll"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "question",
+							"value": "Какой язык програмирования вы хотите изучить?"
+						},
+						{
+							"key": "options",
+							"value": "%5B%22PHP%22%2C%22JavaScript%22%2C%20%22%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B9%20%28%D0%B1%D0%B5%D1%81%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B9%29%20%D1%8F%D0%B7%D1%8B%D0%BA%22%5D"
+						},
+						{
+							"key": "allows_multiple_answers",
+							"value": "0"
+						},
+						{
+							"key": "protect_content",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendPoll (quiz)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendPoll?chat_id={{chatId}}&question=Какой язык програмирования вы хотите изучить?&options=%5B%22PHP%22%2C%22JavaScript%22%2C%20%22%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B9%20%28%D0%B1%D0%B5%D1%81%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B9%29%20%D1%8F%D0%B7%D1%8B%D0%BA%22%5D&allows_multiple_answers=0&protect_content=1&type=quiz&correct_option_id=0&explanation=%D0%A4%D1%83%D1%83%D1%83%D1%83%D1%83%21",
+					"host": [
+						"{{baseUrl}}sendPoll"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "question",
+							"value": "Какой язык програмирования вы хотите изучить?"
+						},
+						{
+							"key": "options",
+							"value": "%5B%22PHP%22%2C%22JavaScript%22%2C%20%22%D0%94%D1%80%D1%83%D0%B3%D0%BE%D0%B9%20%28%D0%B1%D0%B5%D1%81%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B9%29%20%D1%8F%D0%B7%D1%8B%D0%BA%22%5D"
+						},
+						{
+							"key": "allows_multiple_answers",
+							"value": "0"
+						},
+						{
+							"key": "protect_content",
+							"value": "1"
+						},
+						{
+							"key": "type",
+							"value": "quiz"
+						},
+						{
+							"key": "correct_option_id",
+							"value": "0"
+						},
+						{
+							"key": "explanation",
+							"value": "%D0%A4%D1%83%D1%83%D1%83%D1%83%D1%83%21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendLocation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendLocation?chat_id={{chatId}}&latitude=45.085182&longitude=41.879520&live_period=60",
+					"host": [
+						"{{baseUrl}}sendLocation"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "latitude",
+							"value": "45.085182"
+						},
+						{
+							"key": "longitude",
+							"value": "41.879520"
+						},
+						{
+							"key": "live_period",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendVenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}sendVenue?chat_id={{chatId}}&latitude=45.085182&longitude=41.879520&title=%D0%A1%D1%82%D0%BE%D1%8F%D0%BD%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2&address=356000%2C%20%D0%B3.%20%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%2C%20%D0%9B%D0%95%D0%A1%21",
+					"host": [
+						"{{baseUrl}}sendVenue"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "{{chatId}}"
+						},
+						{
+							"key": "latitude",
+							"value": "45.085182"
+						},
+						{
+							"key": "longitude",
+							"value": "41.879520"
+						},
+						{
+							"key": "title",
+							"value": "%D0%A1%D1%82%D0%BE%D1%8F%D0%BD%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2"
+						},
+						{
+							"key": "address",
+							"value": "356000%2C%20%D0%B3.%20%D0%A1%D1%82%D0%B0%D0%B2%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%2C%20%D0%9B%D0%95%D0%A1%21"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiKey",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://api.telegram.org/bot{{apiKey}}/",
+			"type": "string"
+		},
+		{
+			"key": "chatId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "parseMode",
+			"value": "MarkdownV2",
+			"type": "string"
+		},
+		{
+			"key": "groupChatId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
